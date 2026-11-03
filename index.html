@@ -73,10 +73,10 @@
 @media(max-width:760px){.event-submit-wrap{grid-template-columns:1fr}.event-submit-wrap .form-grid{grid-template-columns:1fr}.event-submit-wrap .form-grid .full{grid-column:auto}}
 
 
-.event-ticket{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin:16px 0}
-.event-qr{display:flex;align-items:center;gap:10px;font-size:.82rem;font-weight:700;color:var(--ink)}
-.event-qr img{width:104px;height:104px;object-fit:contain;background:#fff;padding:5px;border:1px solid var(--line);border-radius:6px}
-@media(max-width:480px){.event-ticket{align-items:flex-start}.event-qr{width:100%}}
+.ticket-links{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin-top:14px}
+.ticket-qr{display:flex;flex-direction:column;align-items:center;gap:5px;font-size:.8rem;font-weight:700;color:var(--ink)}
+.ticket-qr img{width:118px;height:118px;object-fit:contain;border:6px solid #fff;border-radius:6px;box-shadow:0 1px 5px rgba(0,0,0,.16)}
+.ticket-links .btn{display:inline-block;text-decoration:none}
 
 </style>
 </head>
@@ -128,18 +128,17 @@
           <div>
             <span class="event-label chamber-label">Chamber Event</span>
             <h3>Wichita Thunder Chamber Night</h3>
-          </div>
-        </div>
         <p>Join the Haysville Chamber, fellow members, family, and friends for a fun night cheering on the Wichita Thunder!</p>
         <p class="small">Saturday, November 14, 2026</p>
-        <div class="event-ticket">
+        <div class="ticket-links">
           <a class="btn btn-navy" href="https://www.ticketmaster.com/event/0600652" target="_blank" rel="noopener">Buy Tickets →</a>
-          <div class="event-qr">
-            <img src="thunder-ticket-qr.png" alt="QR code to purchase Wichita Thunder Chamber Night tickets">
+          <div class="ticket-qr">
+            <img src="wichita-thunder-tickets-qr.png" alt="QR code to purchase Wichita Thunder Chamber Night tickets">
             <span>Scan to buy tickets</span>
           </div>
         </div>
-        <p class="hint">Bring family and friends and join us for Chamber Night!</p>
+        <p class="hint">Bring your family and friends — everyone is welcome!</p>
+        <p class="hint">Ticket information and additional details are available through the Chamber's event announcements.</p>
       </div>
     </article>
     <article class="card event-placeholder">
