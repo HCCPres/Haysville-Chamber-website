@@ -55,6 +55,23 @@
   opacity: 1 !important;
 }
 
+
+/* Events calendar */
+.event-legend{display:flex;flex-wrap:wrap;gap:10px;margin:0 0 18px}
+.event-label{display:inline-block;font-size:.72rem;font-weight:800;text-transform:uppercase;letter-spacing:.6px;padding:6px 9px;border-radius:5px;margin-bottom:8px}
+.chamber-label{background:#fff0b8;color:#665000;border:1px solid #e6bd37}
+.community-label{background:#e6efff;color:#244b91;border:1px solid #b9ccef}
+.event-cards{align-items:stretch}
+.event-cards .card{height:100%}
+.event-note{margin-top:20px;padding:16px 18px;border-left:4px solid var(--gold);background:#fff;border-radius:6px;color:var(--ink)}
+.event-submit-wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:28px;align-items:start;margin-top:42px;padding-top:34px;border-top:1px solid var(--line)}
+.event-submit-wrap h2{margin-top:4px}
+.event-submit-wrap .form-card{margin:0}
+.event-submit-wrap .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 14px}
+.event-submit-wrap .form-grid .full{grid-column:1/-1}
+.event-placeholder{border-style:dashed}
+@media(max-width:760px){.event-submit-wrap{grid-template-columns:1fr}.event-submit-wrap .form-grid{grid-template-columns:1fr}.event-submit-wrap .form-grid .full{grid-column:auto}}
+
 </style>
 </head>
 <body>
@@ -81,12 +98,81 @@
 </div></div>
 <section><div class="container split"><div><div class="eyebrow">The Chamber difference</div><h2>Good things happen when local businesses connect.</h2><p>From welcoming new businesses to creating opportunities to meet, collaborate, and grow, the Haysville Chamber of Commerce works to strengthen our business community.</p><p>Whether you own a business, are looking for a local service, or want to get more involved in Haysville, we're glad you're here.</p><a class="text-link" href="#about">Get to know the Chamber →</a></div>
 <div class="feature-panel"><div class="eyebrow">Get connected</div><h3>More than a membership.</h3><p>Build relationships, raise your visibility, and be part of a network that cares about Haysville's future.</p><ul class="feature-list"><li>Networking and community events</li><li>Business directory and online visibility</li><li>Ribbon cuttings and member spotlights</li><li>Opportunities to support local students</li></ul><a class="btn btn-gold" href="#join">Explore Membership</a></div></div></section>
-<section class="soft" id="events"><div class="container"><div class="section-head"><div><div class="eyebrow">Mark your calendar</div><h2>Connect at a Chamber event</h2><p>Meet fellow business owners, learn something new, and get involved in the Haysville community.</p></div><a class="btn btn-navy" href="#contact">Suggest an Event</a></div>
-<div class="cards" id="eventCards">
-<article class="card"><div class="card-body"><div class="event-date"><div class="date-box"><b>30</b><span>Oct</span></div><div><span class="tag">Community Event</span><h3>Trick or Treat on Main Street</h3></div></div><p>Enjoy an afternoon of Halloween fun and community connections in Haysville.</p><p class="small">October 30, 2026 · 4:00–6:00 PM</p></div></article>
-<article class="card"><div class="card-body"><div class="event-date"><div class="date-box"><b>Monthly</b><span>Mingle</span></div><div><span class="tag">Networking</span><h3>Morning Mingle</h3></div></div><p>A casual come-and-go gathering to meet members and learn more about a local business.</p><p class="small">Check back for the next host and date.</p></div></article>
-<article class="card"><div class="card-body"><div class="event-date"><div class="date-box"><b>Monthly</b><span>Lunch</span></div><div><span class="tag">Member Gathering</span><h3>Chamber Luncheon</h3></div></div><p>Enjoy lunch, hear from a speaker, and stay connected with the Haysville business community.</p><p class="small">Check back for the next topic and RSVP details.</p></div></article>
-</div><p class="hint" style="margin-top:18px">Event dates and details should be reviewed and updated by the Chamber before launch.</p></div></section>
+<section class="soft" id="events">
+<div class="container">
+  <div class="section-head">
+    <div>
+      <div class="eyebrow">Mark your calendar</div>
+      <h2>What's happening in Haysville</h2>
+      <p>Find Chamber gatherings and community events happening around Haysville.</p>
+    </div>
+    <a class="btn btn-navy" href="#submit-event">Submit a Community Event</a>
+  </div>
+
+  <div class="event-legend">
+    <span class="event-label chamber-label">Chamber Event</span>
+    <span class="event-label community-label">Community Event</span>
+  </div>
+
+  <div class="cards event-cards" id="eventCards">
+    <article class="card">
+      <div class="card-body">
+        <div class="event-date">
+          <div class="date-box"><b>14</b><span>Nov</span></div>
+          <div>
+            <span class="event-label chamber-label">Chamber Event</span>
+            <h3>Wichita Thunder Chamber Night</h3>
+          </div>
+        </div>
+        <p>Join the Haysville Chamber, fellow members, family, and friends for a fun night cheering on the Wichita Thunder!</p>
+        <p class="small">Saturday, November 14, 2026</p>
+        <p class="hint">Ticket information and additional details are available through the Chamber's event announcements.</p>
+      </div>
+    </article>
+    <article class="card event-placeholder">
+      <div class="card-body">
+        <span class="event-label community-label">Community Events</span>
+        <h3>Have an event to share?</h3>
+        <p>Local businesses, nonprofits, schools, and community organizations are welcome to submit events for consideration.</p>
+        <a class="text-link" href="#submit-event">Send us your event details →</a>
+      </div>
+    </article>
+  </div>
+
+  <div class="event-note">
+    <strong>Chamber calendar:</strong> Morning Mingles, luncheons, and other Chamber activities will be added as dates and details are confirmed.
+  </div>
+
+  <div class="event-submit-wrap" id="submit-event">
+    <div>
+      <div class="eyebrow">Share what's happening</div>
+      <h2>Submit a Community Event</h2>
+      <p>Have a community event coming up? Send us the details. The Chamber will review submissions before approved events are added to the public calendar.</p>
+      <p class="hint">There is no charge to submit an event. Submission does not guarantee publication; the Chamber may contact you if more information is needed.</p>
+    </div>
+    <form class="form-card" id="eventSubmissionForm">
+      <h3>Community event information</h3>
+      <p class="hint">Fields marked with * are required.</p>
+      <div class="form-grid">
+        <div class="full"><label for="eventName">Event name *</label><input id="eventName" name="eventName" required></div>
+        <div><label for="eventHost">Business / organization hosting *</label><input id="eventHost" name="eventHost" required></div>
+        <div><label for="eventDate">Event date *</label><input id="eventDate" name="eventDate" type="date" required></div>
+        <div><label for="eventStart">Start time *</label><input id="eventStart" name="eventStart" type="time" required></div>
+        <div><label for="eventEnd">End time</label><input id="eventEnd" name="eventEnd" type="time"></div>
+        <div class="full"><label for="eventLocation">Location / address *</label><input id="eventLocation" name="eventLocation" required></div>
+        <div class="full"><label for="eventDescription">Short event description *</label><textarea id="eventDescription" name="eventDescription" rows="4" required></textarea></div>
+        <div class="full"><label for="eventLink">Website or registration link (optional)</label><input id="eventLink" name="eventLink" type="url" placeholder="https://"></div>
+        <div><label for="eventContactName">Contact name *</label><input id="eventContactName" name="eventContactName" required></div>
+        <div><label for="eventContactEmail">Contact email *</label><input id="eventContactEmail" name="eventContactEmail" type="email" required></div>
+        <div class="full"><label for="eventContactPhone">Contact phone</label><input id="eventContactPhone" name="eventContactPhone" type="tel"></div>
+      </div>
+      <button class="btn btn-navy" type="submit" style="margin-top:16px">Prepare Event Submission Email →</button>
+      <p class="hint">This starter form opens your email program with the information filled in. It does not send automatically. A hosted form can be connected later for direct online submissions.</p>
+      <p class="hint" id="eventFormStatus" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</div>
+</section>
 <section id="directory"><div class="container"><div class="section-head"><div><div class="eyebrow">Shop local</div><h2>Find a Chamber member</h2><p>Explore Chamber members and USD 261 schools and district organizations.</p></div></div>
 <div class="directory-search" style="display:grid;grid-template-columns:1fr;gap:12px;max-width:680px">
 <label for="businessSearch" style="margin:0">Search by business name</label>
@@ -150,5 +236,27 @@ function emailDraft(formId, fields, subjectPrefix){
 }
 emailDraft('membershipForm',[['Contact name','appName'],['Business name','appBusiness'],['Email','appEmail'],['Phone','appPhone'],['Business address','appAddress'],['Number of employees','appEmployees'],['Website','appWebsite'],['About the business','appMessage']],'Haysville Chamber Membership Inquiry');
 document.getElementById('contactForm').addEventListener('submit',e=>{e.preventDefault();const body=encodeURIComponent(`Name: ${document.getElementById('contactName').value}\nEmail: ${document.getElementById('contactEmail').value}\nTopic: ${document.getElementById('contactSubject').value}\n\nMessage:\n${document.getElementById('contactMessage').value}`);window.location.href=`mailto:haysvillechamber@gmail.com?subject=${encodeURIComponent('Haysville Chamber Website Contact')}&body=${body}`;});
+
+document.getElementById('eventSubmissionForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  const fields=[
+    ['Event name','eventName'],
+    ['Business / organization hosting','eventHost'],
+    ['Event date','eventDate'],
+    ['Start time','eventStart'],
+    ['End time','eventEnd'],
+    ['Location / address','eventLocation'],
+    ['Description','eventDescription'],
+    ['Website / registration link','eventLink'],
+    ['Contact name','eventContactName'],
+    ['Contact email','eventContactEmail'],
+    ['Contact phone','eventContactPhone']
+  ];
+  const lines=fields.map(([label,id])=>`${label}: ${document.getElementById(id).value || 'Not provided'}`).join('\n');
+  const subject=encodeURIComponent('Community Event Submission for Haysville Chamber Calendar');
+  const body=encodeURIComponent(lines+'\n\nPlease review this event submission for possible inclusion on the Chamber calendar.');
+  window.location.href=`mailto:haysvillechamber@gmail.com?subject=${subject}&body=${body}`;
+});
+
 </script>
 </body></html>
