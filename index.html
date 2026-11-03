@@ -78,6 +78,13 @@
 .ticket-qr img{width:118px;height:118px;object-fit:contain;border:6px solid #fff;border-radius:6px;box-shadow:0 1px 5px rgba(0,0,0,.16)}
 .ticket-links .btn{display:inline-block;text-decoration:none}
 
+
+/* Reliable display for the Wichita Thunder ticket link and embedded QR code */
+.ticket-links{display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin:16px 0}
+.ticket-button{display:inline-flex!important;align-items:center;justify-content:center;padding:12px 18px!important;text-decoration:none!important;visibility:visible!important;opacity:1!important}
+.ticket-qr{display:flex;flex-direction:column;align-items:center;gap:6px;font-size:.8rem;font-weight:700;color:var(--ink)}
+.ticket-qr img{display:block!important;width:130px!important;height:130px!important;object-fit:contain;background:#fff;border:6px solid #fff;border-radius:6px;box-shadow:0 1px 5px rgba(0,0,0,.18);visibility:visible!important;opacity:1!important}
+
 </style>
 </head>
 <body>
@@ -128,17 +135,18 @@
           <div>
             <span class="event-label chamber-label">Chamber Event</span>
             <h3>Wichita Thunder Chamber Night</h3>
+          </div>
+        </div>
         <p>Join the Haysville Chamber, fellow members, family, and friends for a fun night cheering on the Wichita Thunder!</p>
         <p class="small">Saturday, November 14, 2026</p>
         <div class="ticket-links">
-          <a class="btn btn-navy" href="https://www.ticketmaster.com/event/0600652FC05BBB69?did=chamberofcommerc" target="_blank" rel="noopener">Buy Tickets →</a>
+          <a class="btn btn-navy ticket-button" href="https://www.ticketmaster.com/event/0600652FC05BBB69?did=chamberofcommerc" target="_blank" rel="noopener noreferrer">Buy Tickets →</a>
           <div class="ticket-qr">
-            <img src="wichita-thunder-tickets-qr.png" alt="QR code to purchase Wichita Thunder Chamber Night tickets">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAWgAAAFoAQAAAABSnlx4AAACg0lEQVR4nO2azW7DMAyDySHv/8rcgZLtBNuhgNPajdqhzeDvIKgCrT8KL7x+XoGLLrrooou+kT4AgH4WBQqgKEJ+7Kc3W/IM+gBgX4IAJVCCALExebqS3bvS9jeYXnU829kUQaifLmT3V9ASADtYgPz1EUueQROOcNnVsoZ/wpKvpUNPFJ8CKFEp2YLa6c2WPIOGpHSn/nl3cB27d6XPgsFQ7/51Pl/H7l1pyh8tBR+vSMqup1j590Ta6Z8gUSBBEgA5arfeYsnX04y0O0LcRWWkgvGcMX6zJQ+iKQuJEOmI1UX0byCIfI8lD6FJiFZrgpRS1gWHu6q+nEm7rqQEIlS79U9C0ku/p9AOZPQ7M+U7U8JQdpV+T6FDOMLjAq8pN6GWDi5k9640M6Jd61DZ/W5lT8Z7xfcM+gAA0dmJpZvqPUJniq1RuI7du9JdT4Y8+6reCrcvZPeudPQHM/VOeSE8UmOK+v2WPIoW6KzPQzW26h4A2QRlObu3oyMZybQkO1dNR2KIXHoyiY75fCqHPZ7j4nB9TxHXsXtXusc38t6MIFf2sgyWnsyj3Xl11S5y+BWieSKp9iEm0lniKJpUzk2yrmdWPsvZvR+d/ZNWsrfLcVitanOfdezele77Va1oj4Lem1aRsrD0ZA6d9U5bqUKP6hhcDnPjdezemnb7W7l+kjEdcS/lpGc1uzekT/uxQItzxJ6sPGpQ+XsOfdmPzRmar1AOq5qlJ1Poy35sTDGVRT1b8Fc9P4U+Tv+p/znnzp4hq/99Ay26GwgSEkBP60H+Rd9pydfSp/3YXmJax/scGbV/MoceE+7sugJDv8pzh5rPT6IvC/UftKTooosuuuhXXr9LplK1W12gNQAAAABJRU5ErkJggg==" alt="QR code to purchase Wichita Thunder Chamber Night tickets">
             <span>Scan to buy tickets</span>
           </div>
         </div>
         <p class="hint">Bring your family and friends — everyone is welcome!</p>
-        <p class="hint">Ticket information and additional details are available through the Chamber's event announcements.</p>
       </div>
     </article>
     <article class="card event-placeholder">
