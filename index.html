@@ -72,6 +72,12 @@
 .event-placeholder{border-style:dashed}
 @media(max-width:760px){.event-submit-wrap{grid-template-columns:1fr}.event-submit-wrap .form-grid{grid-template-columns:1fr}.event-submit-wrap .form-grid .full{grid-column:auto}}
 
+
+.event-ticket{display:flex;align-items:center;gap:18px;flex-wrap:wrap;margin:16px 0}
+.event-qr{display:flex;align-items:center;gap:10px;font-size:.82rem;font-weight:700;color:var(--ink)}
+.event-qr img{width:104px;height:104px;object-fit:contain;background:#fff;padding:5px;border:1px solid var(--line);border-radius:6px}
+@media(max-width:480px){.event-ticket{align-items:flex-start}.event-qr{width:100%}}
+
 </style>
 </head>
 <body>
@@ -126,7 +132,14 @@
         </div>
         <p>Join the Haysville Chamber, fellow members, family, and friends for a fun night cheering on the Wichita Thunder!</p>
         <p class="small">Saturday, November 14, 2026</p>
-        <p class="hint">Ticket information and additional details are available through the Chamber's event announcements.</p>
+        <div class="event-ticket">
+          <a class="btn btn-navy" href="https://www.ticketmaster.com/event/0600652" target="_blank" rel="noopener">Buy Tickets →</a>
+          <div class="event-qr">
+            <img src="thunder-ticket-qr.png" alt="QR code to purchase Wichita Thunder Chamber Night tickets">
+            <span>Scan to buy tickets</span>
+          </div>
+        </div>
+        <p class="hint">Bring family and friends and join us for Chamber Night!</p>
       </div>
     </article>
     <article class="card event-placeholder">
